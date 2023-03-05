@@ -5,11 +5,7 @@ const app = express();
 
 app.use(express.json());
 
-const corsOptions = {
-    origin: 'http://100.26.159.236:3333/update'
-}
-
-app.use(cors(corsOptions));
+app.use(cors());
 
 app.get('/', (request,response)=>{
     return response.json({message:"Server is up"});
